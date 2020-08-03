@@ -1,0 +1,16 @@
+<%- include('partials/header'); -%>
+<!-- EJS look into the "views" folder-->
+
+
+<h1>Home</h1>
+<p><%= InnerText %></p>
+
+<!-- Made new posts -->
+
+<% postLists.forEach(element => { %>
+    <h1><%= element.title %> </h1>
+    <p><%= element.content %> </p>
+<% }); %>
+
+
+<%- include('partials/footer'); -%>

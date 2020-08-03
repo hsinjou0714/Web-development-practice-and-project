@@ -1,0 +1,31 @@
+body{
+    background-color: #ffdfdf;
+}
+h1{
+    color: #315b96;
+}
+h3{
+    color: #315b96;
+}
+hr{
+    border-style: none;
+    border-top: dotted;
+    border-width: 5px;
+    border-color: lightgrey;
+    width: 5%;
+}
+
+/********CLASS Selector *********/
+.profileImage{
+    border-radius: 100%;
+}
+.SchoolLogo{
+    background-color: white;
+    border-radius: 100%;
+}
+
+.Experience:hover{
+    background-color: #ffe8e8 ;
+
+}
+/********ID Selector *********/

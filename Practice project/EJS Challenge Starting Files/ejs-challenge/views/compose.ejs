@@ -1,0 +1,14 @@
+<%- include("partials/header") %>
+<h1>Compose</h1>
+<div>
+    <form action="/compose" method="POST"> <!--when form is submit it will be pass over to app.js-->
+    <div class="form-group">
+        <label for="TitleInput">Title</label>
+        <input type="text" class="form-control" name="TitleInput" id="TitleInput">
+        <label for="ComposeInput">Post</label>
+        <textarea class="form-control" name="ComposeInput" id="ComposeInput" rows="10"></textarea>
+    </div>
+        <button type="submit" class = "btn btn-primary" name="button"  >Publish</button> <!--button submit the form-->
+    </form>
+</div>
+<%- include("partials/footer") %>
