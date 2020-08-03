@@ -3,8 +3,8 @@
 node_modules/
 
 #personal files to ignore 
-/(learning)HTML personal site/
-/(test)HTML personal site/
+/(learning)HTML_personal_site/
+/(test)HTML_personal_site/
 
 # Xcode
 #
