@@ -35,15 +35,15 @@ app.get("/compose", function (req, res) { //at compose page
   res.render('compose')
 });
 
+
 app.get("/posts/:userPage", function(req,res){ //route parameter to access the user input page, now a dynamic url
-  let userPage = _.lowerCase(req.params.userPage); //_.lowerCase is a loaddash method to make it lowercase https://lodash.com/docs/4.17.15#lowerCase
+  let userPage = _.lowerCase(req.params.userPage); //_.dlowerCase is a loaddash method to make it lowercase https://lodash.com/docs/4.17.15#lowerCase
   console.log(userPage );
-  if( postLists.find(element => _.lowerCase(element.title) == userPage) ){ //find an element in object list 
+  const found = postLists.find(element => _.lowerCase(element.title) == userPage);
+  if(found){ //find an element in object list, if the element could be found  
     console.log("match");
-  }else{
-    console.log("item not in list");
+    res.render("post", {PostTitle : found.title, PostText : found.content});
   }
-  
 });
 
 app.post("/compose", function (req, res) { //user make input

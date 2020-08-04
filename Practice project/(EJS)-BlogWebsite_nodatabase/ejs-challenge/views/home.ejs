@@ -1,4 +1,4 @@
-<%- include('partials/header'); -%>
+<%- include("partials/header") %>
 <!-- EJS look into the "views" folder-->
 
 
@@ -9,7 +9,7 @@
 
 <% postLists.forEach(element => { %>
     <h1><%= element.title %> </h1>
-    <p><%= element.content %> </p>
+    <p><%= element.content.substring(0,100) + "..." %> <a href="/posts/<%= element.title %>">Readmore</a> </p>
 <% }); %>
 
 
