@@ -1,0 +1,29 @@
+<%- include("header") -%>
+
+<div class="box" id="heading">
+  <h1> <%= listTitle %> </h1>
+</div>
+
+<div class="box">
+  <% newListItems.forEach(function(Eachitem){ %>
+  <!-- access each item in array (from item database) -->
+  <form action="/delete" method="post">
+    <div class="item">
+      <input type="checkbox" name="checkbox" value="<%=  Eachitem._id %>" onChange="this.form.submit()">
+      <p><%=  Eachitem.name %></p>
+    </div>
+    <!--For html hidden, to deal with list name -->
+    <!--https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/hidden#:~:text=elements%20of%20type%20hidden,or%20a%20unique%20security%20token.-->
+    <input type="hidden" name="listName" value="<%= listTitle%>"></input>
+  </form>
+  <% }) %>
+
+
+
+  <form class="item" action="/" method="post">
+    <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+    <button type="submit" name="list" value="<%= listTitle %>">+</button>
+  </form>
+</div>
+
+<%- include("footer") -%>
