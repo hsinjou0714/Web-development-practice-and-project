@@ -11,8 +11,8 @@ app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
-mongoose.connect("mongodb://localhost:27017/TodolistDB", { useNewUrlParser: true, useUnifiedTopology: true });
-
+mongoose.connect("mongodb+srv://Admin-Christine:test123@cluster0.8llmp.mongodb.net/TodolistDB", { useNewUrlParser: true, useUnifiedTopology: true });
+//connect to mongodb atlas cluster using "admin-christine", providing the passworld "test123", and save to ToDolistDB
 
 const itemSchema = new mongoose.Schema({
   name: {
