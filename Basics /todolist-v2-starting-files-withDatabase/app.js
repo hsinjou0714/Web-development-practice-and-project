@@ -140,6 +140,10 @@ app.get("/about", function (req, res) {
 });
 
 
-app.listen(3000, function () {
-  console.log("Server started on port 3000");
+let port = process.env.PORT; //that port listen to what heroku set up 
+if (port == null || port == "") { //if it not set up, listern to 3000
+  port = 3000;
+}
+app.listen(port, function () {
+  console.log("Server started on port");
 });
